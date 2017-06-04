@@ -1,0 +1,20 @@
+version: 0.2
+            
+phases:
+  install:
+    commands:
+      - npm install -g yarn
+      - yarn install
+  pre_build:
+    commands:
+      - yarn lint
+  build:
+    commands:
+      - yarn test:cover
+      - yarn build
+  post_build:
+    commands:
+      - yarn package
+artifacts:
+  files:
+    - output.yml

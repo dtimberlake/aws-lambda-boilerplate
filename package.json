@@ -1,0 +1,49 @@
+{
+  "name": "aws-lambda-boilerplate-js",
+  "version": "1.0.0",
+  "description": "Starting point for creating aws lambda functions with nodejs and deployed with CloudFormation",
+  "author": "Daniel Timberlake <daniel@danieltimberlake.com>",
+  "license": "MIT",
+  "repository": "https://github.com/dtimberlake/aws-lambda-boilerplate-js",
+  "config": {
+    "applicationName": "",
+    "s3Bucket": "",
+    "stackName": "",
+    "ciStackName": "",
+    "githubUser": "",
+    "githubRepo": "",
+    "githubBranch": ""
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "^6.24.1",
+    "coveralls": "^2.13.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
+    "jest": "^20.0.4",
+    "serverless": "^1.14.0",
+    "serverless-plugin-webpack": "^1.1.0",
+    "webpack": "^2.6.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "package": "aws cloudformation package --template-file template.yml --s3-bucket $npm_package_config_s3Bucket --output-template-file output.yml",
+    "deploy": "aws cloudformation deploy --template-file output.yml --capabilities CAPABILITY_IAM --stack-name $npm_package_config_stackName",
+    "deploy:ci": "aws cloudformation deploy --template-file ci-template.yml --capabilities CAPABILITY_NAMED_IAM --stack-name $npm_package_config_ciStackName --parameter-overrides GithubOAuthToken=$GITHUB_OAUTH_TOKEN GithubUser=$npm_package_config_githubUser GithubRepository=$npm_package_config_githubRepo GithubBranch=$npm_package_config_githubBranch ApplicationName=$npm_package_config_applicationName",
+    "test": "jest",
+    "test:cover": "jest --coverage",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "watch": "jest --watch",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.58.0",
+    "winston": "^2.3.1"
+  }
+}
