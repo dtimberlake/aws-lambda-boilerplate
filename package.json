@@ -1,10 +1,10 @@
 {
-  "name": "aws-lambda-boilerplate-js",
+  "name": "aws-lambda-boilerplate",
   "version": "1.0.0",
   "description": "Starting point for creating aws lambda functions with nodejs and deployed with CloudFormation",
   "author": "Daniel Timberlake <daniel@danieltimberlake.com>",
   "license": "MIT",
-  "repository": "https://github.com/dtimberlake/aws-lambda-boilerplate-js",
+  "repository": "https://github.com/dtimberlake/aws-lambda-boilerplate",
   "config": {
     "applicationName": "",
     "s3Bucket": "",
