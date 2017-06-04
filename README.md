@@ -1,8 +1,8 @@
 # AWS Lambda Boilerplate (JS)
 
-[![Build Status](https://travis-ci.org/dtimberlake/aws-lambda-boilerplate-js.svg?branch=master)](https://travis-ci.org/dtimberlake/aws-lambda-boilerplate-js)
-[![Coverage Status](https://coveralls.io/repos/github/dtimberlake/aws-lambda-boilerplate-js/badge.svg?branch=master)](https://coveralls.io/github/dtimberlake/aws-lambda-boilerplate-js?branch=master)
-[![Code Climate](https://codeclimate.com/github/dtimberlake/aws-lambda-boilerplate-js/badges/gpa.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
+[![Build Status](https://travis-ci.org/dtimberlake/aws-lambda-boilerplate.svg?branch=master)](https://travis-ci.org/dtimberlake/aws-lambda-boilerplate-js)
+[![Coverage Status](https://coveralls.io/repos/github/dtimberlake/aws-lambda-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/dtimberlake/aws-lambda-boilerplate-js?branch=master)
+[![Code Climate](https://codeclimate.com/github/dtimberlake/aws-lambda-boilerplate/badges/gpa.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
 
 This is my starting point for all of my nodejs lambda functions.
 
